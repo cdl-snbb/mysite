@@ -1,0 +1,5 @@
+db.sqlite3
+settings.py
+set.py
+__pycache__/
+media/

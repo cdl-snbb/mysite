@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f7fb262a-4c60-4218-951d-5bcd66dcc5ce" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Yk8DmX62TOKvhRSsKgKQJhy4ZY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/audio_library/voice_models" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\web服务器\mysite\mysite\media\audio_library\voice_models" />
+      <recent name="F:\web服务器\mysite\mysite\media\audio_library" />
+      <recent name="F:\web服务器\mysite\mysite\static\js" />
+      <recent name="F:\web服务器\mysite\mysite\website\speech_voiceprint" />
+      <recent name="F:\声纹识别\python-vad-master" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django server.mysite">
+    <configuration name="silence (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mysite" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/website/speech_voiceprint" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/website/speech_voiceprint/silence.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_webrtcvad" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python-vad-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="F:/声纹识别/python-vad-master" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="F:/声纹识别/python-vad-master/test_webrtcvad.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="vad" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python-vad-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="F:/声纹识别/python-vad-master" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="F:/声纹识别/python-vad-master/vad.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mysite" type="Python.DjangoServer" factoryName="Django server">
+      <module name="mysite" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="mysite.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.silence (1)" />
+        <item itemvalue="Python.test_webrtcvad" />
+        <item itemvalue="Python.vad" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f7fb262a-4c60-4218-951d-5bcd66dcc5ce" name="Default Changelist" comment="" />
+      <created>1583475114677</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583475114677</updated>
+      <workItem from="1583475116339" duration="8663000" />
+      <workItem from="1583558059758" duration="9150000" />
+      <workItem from="1583578552936" duration="18556000" />
+      <workItem from="1583642452344" duration="19733000" />
+      <workItem from="1583665084724" duration="19258000" />
+      <workItem from="1583688035740" duration="2797000" />
+      <workItem from="1583730381969" duration="2487000" />
+      <workItem from="1583760887877" duration="18643000" />
+      <workItem from="1583828864125" duration="11909000" />
+      <workItem from="1583843859912" duration="15088000" />
+      <workItem from="1583904243447" duration="7858000" />
+      <workItem from="1583915215492" duration="1100000" />
+      <workItem from="1583922839238" duration="2931000" />
+      <workItem from="1583938047644" duration="9019000" />
+      <workItem from="1583991580029" duration="10335000" />
+      <workItem from="1584010625648" duration="2699000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="602" y="306" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583600311109">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="602" y="306" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1032@0.0.1920.1032" timestamp="1583600311109" />
+    <state x="686" y="213" key="FileChooserDialogImpl" timestamp="1583911530179">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="686" y="213" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1583911530179" />
+    <state width="1846" height="43" key="GridCell.Tab.0.bottom" timestamp="1584013337538">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1846" height="43" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1584013337538" />
+    <state width="1846" height="43" key="GridCell.Tab.0.center" timestamp="1584013337538">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1846" height="43" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1584013337538" />
+    <state width="1846" height="43" key="GridCell.Tab.0.left" timestamp="1584013337538">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1846" height="43" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1584013337538" />
+    <state width="1846" height="43" key="GridCell.Tab.0.right" timestamp="1584013337538">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1846" height="43" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1584013337538" />
+    <state x="339" y="56" key="SettingsEditor" timestamp="1584001723547">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="339" y="56" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1584001723547" />
+    <state x="539" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1584012257024">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="539" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1584012257024" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/mysite$main.coverage" NAME="main Coverage Results" MODIFIED="1584000603729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../语音识别" />
+    <SUITE FILE_PATH="coverage/mysite$silence.coverage" NAME="silence Coverage Results" MODIFIED="1583946070740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="F:/声纹识别/python-vad-master" />
+    <SUITE FILE_PATH="coverage/mysite$vad.coverage" NAME="vad Coverage Results" MODIFIED="1583939315238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="F:/声纹识别/python-vad-master" />
+    <SUITE FILE_PATH="coverage/mysite$silence__1_.coverage" NAME="silence (1) Coverage Results" MODIFIED="1583946245297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/website/speech_voiceprint" />
+    <SUITE FILE_PATH="coverage/mysite$test_webrtcvad.coverage" NAME="test_webrtcvad Coverage Results" MODIFIED="1583939748366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="F:/声纹识别/python-vad-master" />
+  </component>
+</project>

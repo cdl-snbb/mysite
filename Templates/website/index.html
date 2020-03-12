@@ -1,0 +1,221 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>语音识别</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    {% load static %}
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+         <div class="container">
+             <div class="navbar-header">
+                 <a href="#" class="navbar-brand disabled">语音识别系统</a>
+             </div>
+             <div id="navbar" class="collapse navbar-collapse">
+                 <form action="/index/" method="get" class="first"></form>
+                 <ul class="nav navbar-nav" id="mytab">
+                     <li class="active"><a href="#" id="home_page">首页</a></li>
+                     <li><a href="#" data-toggle="modal" data-target="#myModal_login">登录</a></li>
+                     <li><a href="#" data-toggle="modal" data-target="#myModal_enroll">注册</a></li>
+                     <li><a href="#">退出</a></li>
+                 </ul>
+             </div>
+         </div>
+    </nav>
+
+    <div class="modal fade bs-example-modal-sm" id="myModal_login" role="dialog" aria-label="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">登录</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group">
+                            <label class="control-label">用户名:</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">密码:</label>
+                            <input type="password" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        确定
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bs-example-modal-sm" id="myModal_enroll" role="dialog" aria-label="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">注册</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group">
+                            <label class="control-label">请输入邮箱:</label>
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">请输入密码:</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">请再次输入密码:</label>
+                            <input type="password" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        确定
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron major">
+            <div>
+            <ul class="nav nav-pills" id="con">
+              <li class="active"><a href="#">语音识别</a></li>
+              <li><a href="#" id="voice">声纹识别</a></li>
+              <li><a href="#">训练</a></li>
+              <li><a href="#">上传模型</a></li>
+            </ul>
+            </div>
+
+            <hr>
+
+            <div class="tab_con">
+                <div class="item" style="display: block">
+                    <form role="form" action="/speech/" method="post" class="speech" enctype="multipart/form-data" id="speech_input">
+                        <div class="form-group">
+                            <label for="inputfile">语音文件输入：</label>
+                            {% csrf_token %}
+                            <input type="file" value="选择文件" accept=".wav" name="file" id="speech_file">
+                        </div>
+                        <input type="submit" value="提交" class="btn btn-primary">
+                        <div><span id="speech_error" class="text-danger pull-left"></span></div>
+                    </form>
+                </div>
+
+                <div class="item">
+                    <span id="voice_tip" class="text-danger pull-left"></span>
+                    <br>
+                    <form role="form" action="/voice/" method="post" class="voice" enctype="multipart/form-data" id="voice_input">
+                        <div class="form-group">
+                            <label for="inputfile">语音文件输入：</label>
+                            {% csrf_token %}
+                            <input type="file" value="选择文件" accept=".wav" name="file" id="voice_file">
+                            <input type="hidden" class="number" name="number">
+                        </div>
+                        <input type="submit" value="提交" class="btn btn-primary">
+                        <div><span id="voice_error" class="text-danger pull-left"></span></div>
+                    </form>
+                </div>
+
+                <div class="item">
+                    <div class="form-group">
+                        <label for="inputfile">敬请期待</label>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <form role="form" action="/upload_model/" method="post" class="upload_model" enctype="multipart/form-data" id="upload_model">
+                        <div class="form-group">
+                            {% csrf_token %}
+                            请输入用户名：<input type="text" name="username" class="upload_file" required>
+                            请输入密&nbsp;码：<input type="password" name="password" class="upload_file" required>
+                            <input type="file" value="选择文件" accept=".gmm" name="file" class="upload_file">
+                        </div>
+                        <input type="submit" value="提交" class="btn btn-primary">
+                        <div><span id="upload_error" class="text-danger pull-left"></span></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="comment-area">
+                    <h3 class="comment-area-title">文字输入:</h3>
+                    <form action="/text_input/" method="post" style="overflow: hidden" id="comment_form">
+                        {% csrf_token %}
+                        {% for field in comment_form %}
+                        {{ field }}
+                        {% endfor %}
+                        <span id="comment_error" class="text-danger pull-left"></span>
+                        <input type="submit" value="确定" class="btn btn-primary pull-right">
+                    </form>
+                </div>
+                <div class="comment-area">
+                    <div style="display: block" class="comment-title">
+                        <span style="float: left">
+                            <h3 class="comment-area-title">对话列表:</h3>
+                        </span>
+                        <span style="float: right">
+                            <form action="/clear_comment/" method="post">
+                                {% csrf_token %}
+                                <input type="submit" value="清空列表" class="btn btn-primary">
+                            </form>
+                        </span>
+                    </div>
+                    <div id="comment_list">
+                        {% for comment in comments %}
+                            {% if comment.user == 'robot' %}
+                                <div class="robot">
+                                    {{ comment.user }}
+                                    ({{ comment.comment_time|date:"Y-m-d H:i:s" }}):
+                                    <br>
+                                    {{ comment.text }}
+                                </div>
+                            {% else %}
+                                <div class="user">
+                                    {{ comment.user }}
+                                    ({{ comment.comment_time|date:"Y-m-d H:i:s" }}):
+                                    {{ comment.text|safe }}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
+
