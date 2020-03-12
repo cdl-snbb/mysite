@@ -9,4 +9,4 @@ class UserTableAdmin(admin.ModelAdmin):
 # admin.site.register(UserTable, UserTableAdmin)
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('user', "text", 'comment_time')
+    list_display = ('userme', "text", 'comment_time')

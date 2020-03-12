@@ -78,19 +78,19 @@ def speech(request):
         tip = ''
 
     comment = Comment()
-    comment.user = "您"
+    comment.userme = "您"
     comment.text = text[0] + tip
     comment.save()
 
-    data['user'] = [comment.user, comment.comment_time.timestamp(), comment.text]
+    data['user'] = [comment.userme, comment.comment_time.timestamp(), comment.text]
     # 把文字提交机器人
     return_msg = sizhi_msg(text[0])
 
     comment = Comment()
-    comment.user = "robot"
+    comment.userme = "robot"
     comment.text = return_msg
     comment.save()
-    data['robot'] = [comment.user, comment.comment_time.timestamp(), comment.text]
+    data['robot'] = [comment.userme, comment.comment_time.timestamp(), comment.text]
     return JsonResponse(data)
 
 
@@ -109,20 +109,20 @@ def text_input(request):
     text_str = text_html.sub('', text)
 
     comment = Comment()
-    comment.user = "您"
+    comment.userme = "您"
     comment.text = text
     comment.save()
 
-    data['user'] = [comment.user, comment.comment_time.timestamp(), comment.text]
+    data['user'] = [comment.userme, comment.comment_time.timestamp(), comment.text]
 
     return_msg = sizhi_msg(text_str)
     comment = Comment()
-    comment.user = "robot"
+    comment.userme = "robot"
     comment.text = return_msg
     comment.save()
 
     # 返回数据
-    data['robot'] = [comment.user, comment.comment_time.timestamp(), comment.text]
+    data['robot'] = [comment.userme, comment.comment_time.timestamp(), comment.text]
     # 异步提交
     return JsonResponse(data)
 
@@ -155,11 +155,11 @@ def voice(request):
     models = os.listdir(model_path)
     if len(models) == 0:
         comment = Comment()
-        comment.user = "robot"
+        comment.userme = "robot"
         comment.text = "没有声学模型，无法进行声纹验证。"
         comment.save()
 
-        data['robot'] = [comment.user, comment.comment_time.timestamp(), comment.text]
+        data['robot'] = [comment.userme, comment.comment_time.timestamp(), comment.text]
 
         return JsonResponse(data)
     try:
@@ -190,7 +190,7 @@ def voice(request):
         text = ['']
 
     comment = Comment()
-    comment.user = "robot"
+    comment.userme = "robot"
 
     if n == 1 and number == text[0]:
         comment.text = "恭喜您，声纹验证通过。"
@@ -198,7 +198,7 @@ def voice(request):
         comment.text = "对不起，声纹验证失败。"
     comment.save()
 
-    data['robot'] = [comment.user, comment.comment_time.timestamp(), comment.text]
+    data['robot'] = [comment.userme, comment.comment_time.timestamp(), comment.text]
 
     return JsonResponse(data)
 
@@ -216,7 +216,7 @@ def upload_model(request):
     username = get_object_or_404(UserTable.objects.filter(username=username))
 
     comment = Comment()
-    comment.user = "robot"
+    comment.userme = "robot"
     if password == username.password:
         try:
             file_name = request.FILES["file"].name
@@ -231,6 +231,6 @@ def upload_model(request):
         comment.text = "对不起，文件上传失败。"
     comment.save()
 
-    data['robot'] = [comment.user, comment.comment_time.timestamp(), comment.text]
+    data['robot'] = [comment.userme, comment.comment_time.timestamp(), comment.text]
 
     return JsonResponse(data)

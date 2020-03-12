@@ -9,7 +9,7 @@ class UserTable(models.Model):
         return "<UserTable: %s>" % self.username
 
 class Comment(models.Model):
-    user = models.CharField(max_length=20)
+    userme = models.CharField(max_length=20)
     text = models.TextField()
     comment_time = models.DateTimeField(auto_now_add=True)
 

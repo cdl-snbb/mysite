@@ -194,16 +194,16 @@
                     </div>
                     <div id="comment_list">
                         {% for comment in comments %}
-                            {% if comment.user == 'robot' %}
+                            {% if comment.userme == 'robot' %}
                                 <div class="robot">
-                                    {{ comment.user }}
+                                    {{ comment.userme }}
                                     ({{ comment.comment_time|date:"Y-m-d H:i:s" }}):
                                     <br>
                                     {{ comment.text }}
                                 </div>
                             {% else %}
                                 <div class="user">
-                                    {{ comment.user }}
+                                    {{ comment.userme }}
                                     ({{ comment.comment_time|date:"Y-m-d H:i:s" }}):
                                     {{ comment.text|safe }}
                                 </div>
